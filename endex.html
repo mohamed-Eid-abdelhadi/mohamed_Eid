@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>مكتب الدفاع الجنائي | Criminal Defense Law Office</title>
+<meta name="color-scheme" content="dark">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cormorant+Garamond:wght@500;600&family=Tajawal:wght@400;500;700&family=Jost:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#100E0D; --surface:#1B1714; --line:#3A3229; --brass:#C2A266; --brass-d:#8F7440;
+  --ivory:#EDE6D6; --muted:#A89F8F;
+  --display:"Amiri","Cormorant Garamond",Georgia,serif;
+  --body:"Tajawal","Jost",system-ui,sans-serif;
+  color-scheme:dark; box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+html{scroll-behavior:smooth;scroll-padding-top:72px;background:var(--ink)}
+html[lang="en"]{--display:"Cormorant Garamond","Amiri",Georgia,serif;--body:"Jost","Tajawal",system-ui,sans-serif}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--ink);color:var(--ivory);font-family:var(--body);font-size:1.0625rem;line-height:1.8}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--brass);outline-offset:3px}
+.wrap{max-width:1080px;margin-inline:auto;padding-inline:24px}
+h1,h2,h3{font-family:var(--display);font-weight:700;margin:0;line-height:1.25}
+html[lang="en"] h1,html[lang="en"] h2,html[lang="en"] h3{font-weight:600}
+
+/* top bar */
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:rgba(16,14,13,.92);z-index:11}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:rgba(16,14,13,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;justify-content:space-between;height:64px;gap:16px}
+.brand{font-family:var(--display);font-size:1.35rem;color:var(--brass);font-weight:700}
+nav{display:flex;gap:28px;font-size:.95rem;color:var(--muted)}
+nav a:hover{color:var(--ivory)}
+.tools{display:flex;align-items:center;gap:12px}
+.lang{background:none;border:1px solid var(--line);color:var(--ivory);padding:6px 14px;border-radius:2px;font:inherit;font-size:.9rem;cursor:pointer}
+.lang:hover{border-color:var(--brass)}
+.btn{display:inline-block;padding:13px 28px;border-radius:2px;font-weight:700;font-size:1rem;border:1px solid var(--brass);transition:background .2s,color .2s}
+.btn.solid{background:var(--brass);color:var(--ink)}
+.btn.solid:hover{background:var(--ivory);border-color:var(--ivory)}
+.btn.ghost{color:var(--brass)}
+.btn.ghost:hover{background:var(--brass);color:var(--ink)}
+
+/* hero */
+.hero{position:relative;padding:112px 0 96px;border-bottom:1px solid var(--line);
+  background:radial-gradient(900px 420px at 85% -10%,rgba(194,162,102,.10),transparent 70%)}
+html[dir="ltr"] .hero{background:radial-gradient(900px 420px at 15% -10%,rgba(194,162,102,.10),transparent 70%)}
+.hero .wrap{display:grid;grid-template-columns:1fr;gap:40px}
+.rule{width:64px;height:2px;background:var(--brass)}
+h1{font-size:clamp(2.6rem,7.5vw,5.2rem);letter-spacing:-.01em;max-width:14ch}
+html[lang="ar"] h1{line-height:1.35;max-width:12ch}
+.lead{max-width:46ch;color:var(--muted);font-size:1.15rem;margin:0}
+.cta{display:flex;flex-wrap:wrap;gap:14px}
+.urgent{display:flex;align-items:center;gap:14px;border:1px solid var(--line);background:var(--surface);padding:16px 22px;max-width:max-content;border-radius:2px}
+.dot{width:9px;height:9px;border-radius:50%;background:var(--brass);box-shadow:0 0 0 0 rgba(194,162,102,.6);animation:pulse 2.4s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 12px rgba(194,162,102,0)}100%{box-shadow:0 0 0 0 rgba(194,162,102,0)}}
+.urgent b{color:var(--brass);font-family:var(--body);direction:ltr;unicode-bidi:isolate}
+.rise{animation:rise .9s cubic-bezier(.2,.7,.2,1) both}
+@keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+
+section{padding:88px 0;border-bottom:1px solid var(--line)}
+h2{font-size:clamp(1.9rem,4vw,2.7rem);margin-bottom:14px}
+.sub{color:var(--muted);max-width:52ch;margin:0 0 48px}
+
+/* practice areas: ruled list, not cards */
+.areas{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.areas li{display:grid;grid-template-columns:minmax(150px,260px) 1fr;gap:24px;padding:26px 0;border-bottom:1px solid var(--line)}
+.areas h3{font-size:1.5rem;color:var(--brass)}
+.areas p{margin:0;color:var(--muted)}
+
+/* first-hours: real sequence */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--line)}
+.step{padding:32px 28px;background:var(--surface)}
+.step+.step{border-inline-start:1px solid var(--line)}
+.step .n{font-family:var(--display);font-size:2.6rem;color:var(--brass-d);line-height:1;margin-bottom:14px;display:block}
+.step h3{font-size:1.3rem;margin-bottom:8px}
+.step p{margin:0;color:var(--muted);font-size:1rem}
+
+/* about */
+.about{display:grid;grid-template-columns:1fr 1.4fr;gap:56px;align-items:start}
+.portrait{aspect-ratio:4/5;background:linear-gradient(160deg,#241F1A,#14110F);border:1px solid var(--line);display:grid;place-items:center;color:var(--brass-d);font-family:var(--display);font-size:1.1rem;text-align:center;padding:24px}
+.facts{display:flex;gap:36px;flex-wrap:wrap;margin-top:28px;padding-top:24px;border-top:1px solid var(--line)}
+.facts div{display:flex;flex-direction:column}
+.facts strong{font-family:var(--display);font-size:2rem;color:var(--brass);line-height:1.2}
+.facts span{color:var(--muted);font-size:.95rem}
+.about p{color:var(--muted);margin:0 0 16px;max-width:56ch}
+
+/* contact */
+.contact{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--line)}
+.contact a{padding:32px 28px;background:var(--surface);display:flex;flex-direction:column;gap:6px;transition:background .2s}
+.contact a+a{border-inline-start:1px solid var(--line)}
+.contact a:hover{background:#241F1A}
+.contact small{color:var(--muted);font-size:.95rem}
+.contact strong{font-family:var(--display);font-size:1.5rem;color:var(--brass);direction:ltr;unicode-bidi:isolate;text-align:start}
+.note{margin-top:24px;color:var(--muted);font-size:.95rem}
+footer{padding:36px 0;color:var(--muted);font-size:.9rem}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+
+@media(max-width:820px){
+  nav{display:none}
+  .hero{padding:72px 0 64px}
+  section{padding:64px 0}
+  .areas li{grid-template-columns:1fr;gap:6px}
+  .steps,.contact{grid-template-columns:1fr}
+  .step+.step,.contact a+a{border-inline-start:0;border-top:1px solid var(--line)}
+  .about{grid-template-columns:1fr;gap:32px}
+  .portrait{aspect-ratio:16/10}
+  .btn{flex:1;text-align:center}
+}
+@media(prefers-reduced-motion:reduce){.rise,.dot{animation:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap bar">
+    <a class="brand" href="#top" data-ar="مكتب الأستاذ [محمد عيد عبد الهادي]" data-en="Law Office of [Lawyer Name]">مكتب الأستاذ [محمد عيد عبدالهادي]</a>
+    <nav aria-label="Main">
+      <a href="#areas" data-ar="مجالات العمل" data-en="Practice">مجالات العمل</a>
+      <a href="#first" data-ar="عند القبض" data-en="If arrested">عند القبض</a>
+      <a href="#about" data-ar="عن المكتب" data-en="About">عن المكتب</a>
+      <a href="#contact" data-ar="تواصل معنا" data-en="Contact">تواصل معنا</a>
+    </nav>
+    <div class="tools"><button class="lang" id="lang" type="button" aria-label="Switch language">English</button></div>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="wrap">
+    <div class="rule rise"></div>
+    <h1 class="rise" style="animation-delay:.1s" data-ar="دفاعٌ يبدأ من أول ساعة." data-en="Defense that begins in the first hour.">دفاعٌ يبدأ من أول ساعة.</h1>
+    <p class="lead rise" style="animation-delay:.25s" data-ar="محامٍ متخصص في القضايا الجنائية. أحضر التحقيق، وأدرس ملف القضية، وأترافع أمام المحاكم بكل درجاتها." data-en="A criminal defense lawyer. I attend the investigation, study the case file, and argue before courts at every level.">محامٍ متخصص في القضايا الجنائية. أحضر التحقيق، وأدرس ملف القضية، وأترافع أمام المحاكم بكل درجاتها.</p>
+    <div class="cta rise" style="animation-delay:.4s">
+      <a class="btn solid" href="tel:01027307753" data-ar="اتصل الآن" data-en="Call now">اتصل الآن</a>
+      <a class="btn ghost" href="https://wa.me/2001027307753" data-ar="راسلنا على واتساب" data-en="Message on WhatsApp">راسلنا على واتساب</a>
+    </div>
+    <div class="urgent rise" style="animation-delay:.55s">
+      <span class="dot" aria-hidden="true"></span>
+      <span><span data-ar="خط الطوارئ على مدار الساعة:" data-en="Emergency line, all hours:">اطلب اجل للاطلاع والاستعداد للمرافعة يا فندم:</span> <b>01027307753</b></span>
+    </div>
+  </div>
+</section>
+
+<section id="areas">
+  <div class="wrap">
+    <h2 data-ar="مجالات العمل" data-en="Areas of practice">مجالات العمل</h2>
+    <p class="sub" data-ar="كل القضايا الجنائية، من لحظة البلاغ حتى النقض." data-en="Every criminal matter, from the first report to cassation.">كل القضايا الجنائية، من لحظة البلاغ حتى النقض.</p>
+    <ul class="areas">
+      <li><h3 data-ar="الجنايات" data-en="Felonies">الجنايات</h3><p data-ar="القتل والضرب المفضي إلى الموت والسرقة بالإكراه والحرائق العمدية، أمام محاكم الجنايات." data-en="Homicide, assault causing death, armed robbery and arson, before the criminal courts.">القتل والضرب المفضي إلى الموت والسرقة بالإكراه والحرائق العمدية، أمام محاكم الجنايات.</p></li>
+      <li><h3 data-ar="الجنح والمخالفات" data-en="Misdemeanors">الجنح والمخالفات</h3><p data-ar="الاعتداء والسب والقذف والتبديد والنصب، مع الطعن بالاستئناف." data-en="Assault, defamation, embezzlement and fraud, including appeals.">الاعتداء والسب والقذف والتبديد والنصب، مع الطعن بالاستئناف.</p></li>
+      <li><h3 data-ar="قضايا المخدرات" data-en="Drug cases">قضايا المخدرات</h3><p data-ar="فحص إجراءات الضبط والتفتيش والتحريز، والدفع ببطلانها متى لزم." data-en="Reviewing arrest, search and evidence handling, and challenging any procedural defect.">فحص إجراءات الضبط والتفتيش والتحريز، والدفع ببطلانها متى لزم.</p></li>
+      <li><h3 data-ar="الجرائم الإلكترونية" data-en="Cybercrime">الجرائم الإلكترونية</h3><p data-ar="الاختراق والابتزاز الإلكتروني والتشهير عبر وسائل التواصل." data-en="Hacking, online extortion and defamation on social media.">الاختراق والابتزاز الإلكتروني والتشهير عبر وسائل التواصل.</p></li>
+      <li><h3 data-ar="الشيكات وإيصالات الأمانة" data-en="Cheques and trust receipts">الشيكات وإيصالات الأمانة</h3><p data-ar="الدفاع في بلاغات الشيك بدون رصيد وخيانة الأمانة، والتصالح متى أمكن." data-en="Defense in bounced-cheque and breach-of-trust complaints, with settlement where possible.">الدفاع في بلاغات الشيك بدون رصيد وخيانة الأمانة، والتصالح متى أمكن.</p></li>
+      <li><h3 data-ar="الطعن بالنقض" data-en="Cassation appeals">الطعن بالنقض</h3><p data-ar="مذكرات الطعن على الأحكام الجنائية، وطلبات وقف التنفيذ." data-en="Appeal briefs against criminal judgments, and requests to stay execution.">مذكرات الطعن على الأحكام الجنائية، وطلبات وقف التنفيذ.</p></li>
+    </ul>
+  </div>
+</section>
+
+<section id="first">
+  <div class="wrap">
+    <h2 data-ar="إذا تم القبض عليك أو على أحد أقاربك" data-en="If you or a relative is arrested">إذا تم القبض عليك أو على أحد أقاربك</h2>
+    <p class="sub" data-ar="ما يحدث في الساعات الأولى قد يحدد مسار القضية كلها." data-en="What happens in the first hours can shape the whole case.">ما يحدث في الساعات الأولى قد يحدد مسار القضية كلها.</p>
+    <div class="steps">
+      <div class="step"><span class="n">١</span><h3 data-ar="التزم الصمت" data-en="Stay silent">التزم الصمت</h3><p data-ar="لا توقّع على أي محضر ولا تدلِ بأقوال قبل حضور محاميك." data-en="Sign nothing and give no statement until your lawyer is present.">لا توقّع على أي محضر ولا تدلِ بأقوال قبل حضور محاميك.</p></div>
+      <div class="step"><span class="n">٢</span><h3 data-ar="اتصل بنا فورًا" data-en="Call us at once">اتصل بنا فورًا</h3><p data-ar="نتوجه إلى القسم أو النيابة ونحضر معك التحقيق." data-en="We go to the station or prosecution office and attend the investigation with you.">نتوجه إلى القسم أو النيابة ونحضر معك التحقيق.</p></div>
+      <div class="step"><span class="n">٣</span><h3 data-ar="نبني الدفاع" data-en="We build the defense">نبني الدفاع</h3><p data-ar="ندرس المحضر والأدلة ونطلب الإفراج أو بدائل الحبس الاحتياطي." data-en="We study the report and evidence, and seek release or alternatives to pretrial detention.">ندرس المحضر والأدلة ونطلب الإفراج أو بدائل الحبس الاحتياطي.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap about">
+    <div class="portrait" data-ar="مكان صورة المحامي" data-en="Lawyer’s portrait goes here"><img src="22.jpeg" alt="error" >   </div>
+    <div>
+      <h2 data-ar="عن المكتب" data-en="About the office">عن المكتب</h2>
+      <p data-ar="يعمل الأستاذ [اسم المحامي] في الدفاع الجنائي منذ سنوات، ويتابع كل قضية بنفسه من أول جلسة. الالتزام بالسرية وسرعة الاستجابة هما أساس عمل المكتب." data-en="[Lawyer Name] has practiced criminal defense for years and handles every case personally from the first hearing. Confidentiality and a fast response are the foundation of the office.">يعمل الأستاذ [محمد عيد عبد الهادي] في الدفاع الجنائي منذ سنوات، ويتابع كل قضية بنفسه من أول جلسة. الالتزام بالسرية وسرعة الاستجابة هما أساس عمل المكتب.</p>
+      <p data-ar="عضو نقابة المحامين، ومقيد أمام محكمة النقض." data-en="Member of the Bar Association, admitted before the Court of Cassation.">عضو نقابة المحامين،ومقيد في كوم بدار بجوار النقطة.</p>
+      <div class="facts">
+        <div><strong>+3</strong><span data-ar="سنة خبرة" data-en="Years of practice">سنة خبرة</span></div>
+        <div><strong>+67</strong><span data-ar="قضية تم الدفاع فيها" data-en="Cases defended">قضية تم الدفاع فيها</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" style="border-bottom:0">
+  <div class="wrap">
+    <h2 data-ar="تواصل معنا" data-en="Get in touch">تواصل معنا</h2>
+    <p class="sub" data-ar="كل المعلومات تُعامل بسرية تامة منذ أول اتصال." data-en="Everything you tell us is confidential from the first call.">كل المعلومات تُعامل بسرية تامة منذ أول اتصال.</p>
+    <div class="contact">
+      <a href="https://www.instagram.com/mu7ammad_3id?xtok=bzcyc2Z3ZnlsMGM="><small data-ar="هاتف الطوارئ" data-en="Emergency phone">الانستا</small><strong>instagram</strong></a>
+      <a href="https://www.facebook.com/muhammad.eid.603522"><small data-ar="واتساب" data-en="WhatsApp">الفيس</small><strong>facebook</strong></a>
+      <a href="egeneral678@gmail.com"><small data-ar="البريد الإلكتروني" data-en="Email">البريد الإلكتروني</small><strong>egeneral678@gmail.com</strong></a>
+    </div>
+    <p class="note" data-ar="العنوان: [عنوان المكتب]، [المدينة]. مواعيد الاستقبال: [من – إلى]." data-en="Address: [office address], [city]. Office hours: [from – to].">العنوان: [المنشاء]، [سوهاج]. مواعيد الاستقبال: [8ص – 6م].</p>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span data-ar="© ٢٠٢٦ مكتب الأستاذ [اسم المحامي]. جميع الحقوق محفوظة." data-en="© 2026 Law Office of [Lawyer Name]. All rights reserved.">© ٢٠٢٦ مكتب الأستاذ [محمد عيد عبدالهادي ]. جميع الحقوق محفوظة.</span>
+    <span data-ar="المعلومات في هذا الموقع للتعريف ولا تُعد استشارة قانونية." data-en="This site is for information and is not legal advice.">المعلومات في هذا الموقع للتعريف ولا تُعد استشارة قانونية.</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var btn=document.getElementById('lang'), titles={ar:'مكتب الدفاع الجنائي',en:'Criminal Defense Law Office'};
+  function set(l){
+    var h=document.documentElement;
+    h.lang=l; h.dir=l==='ar'?'rtl':'ltr';
+    document.querySelectorAll('[data-ar]').forEach(function(e){e.textContent=e.getAttribute('data-'+l)});
+    btn.textContent=l==='ar'?'English':'العربية';
+    document.title=titles[l];
+    try{localStorage.setItem('lang',l)}catch(e){}
+  }
+  btn.addEventListener('click',function(){set(document.documentElement.lang==='ar'?'en':'ar')});
+  var saved=null; try{saved=localStorage.getItem('lang')}catch(e){}
+  if(saved==='en') set('en');
+})();
+</script>
+</body>
+</html>
